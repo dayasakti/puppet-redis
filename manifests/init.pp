@@ -48,6 +48,13 @@ class redis (
 
   # Install default instance
   redis::instance { 'redis-default': }
+  
+  notice("version=${version}")
+  notice("redis_src_dir=${redis_src_dir}")
+  notice("redis_bin_dir=${redis_bin_dir}")
+  notice("redis_pkg_name=${redis_pkg_name}")
+  notice("redis_pkg=${redis_pkg}")
+
 
   File {
     owner => root,
