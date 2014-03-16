@@ -116,7 +116,7 @@ define redis::instance (
   }
 
   service { "redis-${redis_port}":
-    ensure    => running,
+    ensure    => stopped,
     name      => "redis_${redis_port}",
     enable    => true,
     require   => [ File["redis_port_${redis_port}.conf"], File["redis-init-${redis_port}"], File["redis-lib-port-${redis_port}"] ],
